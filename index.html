@@ -5,204 +5,168 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alef Lima da Silva | Técnico em Eletrônica</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-    font-family:'Roboto',sans-serif;
-    background:linear-gradient(135deg,#0f172a,#1e3a8a);
-    color:#e2e8f0;
-    scroll-behavior:smooth;
+    font-family:'Montserrat',sans-serif;
+    background:#f5f5f5;
+    color:#333;
+    line-height:1.6;
 }
 
-/* MENU */
-nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:rgba(15,23,42,0.95);
-    backdrop-filter:blur(8px);
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    padding:15px;
-    z-index:1000;
-}
-nav a{
-    color:#e2e8f0;
-    text-decoration:none;
-    font-weight:500;
-    transition:.3s;
-}
-nav a:hover{
-    color:#60a5fa;
+/* Container principal */
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:60px 50px;
 }
 
-/* HEADER */
-header{
+/* Header */
+.header{
     text-align:center;
-    padding:160px 20px 80px;
+    margin-bottom:50px;
 }
-header img{
-    width:170px;
-    height:170px;
+
+.header img{
+    width:140px;
+    height:140px;
     border-radius:50%;
     object-fit:cover;
-    border:4px solid #60a5fa;
     margin-bottom:20px;
-    transition:.3s;
 }
-header img:hover{
-    transform:scale(1.05);
-}
-h1{
-    font-size:38px;
+
+.header h1{
+    font-size:34px;
+    font-weight:700;
     margin-bottom:10px;
 }
-.subtitle{
+
+.header h2{
     font-size:18px;
-    height:28px;
+    font-weight:400;
+    color:#666;
     margin-bottom:20px;
-    font-style:italic;
-    border-right:2px solid #60a5fa;
-    white-space:nowrap;
-    overflow:hidden;
 }
-header p{
-    max-width:600px;
-    margin:0 auto 25px;
-    opacity:.9;
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    border:1px solid #333;
+    text-decoration:none;
+    color:#333;
+    font-size:14px;
+    transition:0.3s;
 }
-button{
-    background:#2563eb;
+
+.btn:hover{
+    background:#333;
     color:white;
-    padding:14px 28px;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:15px;
-    transition:.3s;
-}
-button:hover{
-    background:#1d4ed8;
-    transform:translateY(-3px);
 }
 
-/* SEÇÕES */
-section{
-    max-width:1000px;
-    margin:60px auto;
-    padding:0 20px;
-}
-h2{
-    margin-bottom:20px;
-    font-size:24px;
-    border-left:5px solid #60a5fa;
-    padding-left:10px;
-}
-.card{
-    background:rgba(30,41,59,0.9);
-    padding:25px;
-    border-radius:15px;
-    margin-bottom:30px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
-    transition:.3s;
-}
-.card:hover{
-    transform:translateY(-6px);
+/* Seções */
+.section{
+    margin-bottom:45px;
 }
 
+.section h3{
+    font-size:18px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:15px;
+    border-bottom:1px solid #ddd;
+    padding-bottom:8px;
+}
+
+.section p{
+    margin-bottom:10px;
+}
+
+/* Lista habilidades */
 .skills{
     display:flex;
     flex-wrap:wrap;
     gap:10px;
 }
+
 .skill{
-    background:#2563eb;
-    padding:8px 15px;
-    border-radius:20px;
-    font-size:14px;
+    background:#eee;
+    padding:8px 14px;
+    font-size:13px;
 }
 
-a{
-    color:#60a5fa;
+/* Contato */
+.contact p{
+    margin-bottom:8px;
+}
+
+.contact a{
+    color:#333;
     text-decoration:none;
 }
-a:hover{
+
+.contact a:hover{
     text-decoration:underline;
 }
 
+/* Footer */
 footer{
     text-align:center;
-    padding:25px;
-    background:#0f172a;
+    font-size:13px;
+    color:#777;
     margin-top:40px;
-    font-size:14px;
 }
 
-@media(max-width:600px){
-    nav{flex-direction:column;gap:15px}
-    h1{font-size:28px}
+@media(max-width:768px){
+    .container{
+        padding:40px 25px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-<a href="#sobre">Sobre</a>
-<a href="#formacao">Formação</a>
-<a href="#projetos">Projetos</a>
-<a href="#habilidades">Habilidades</a>
-<a href="#contato">Contato</a>
-</nav>
+<div class="container">
 
-<header>
+<div class="header">
 <img src="sua-foto.jpg" alt="Alef Lima da Silva">
 <h1>Alef Lima da Silva</h1>
-<div class="subtitle" id="typing"></div>
-<p>
-Estudante de Técnico em Eletrônica com foco em tecnologia, automação e sistemas embarcados.
-Buscando oportunidade para aplicar conhecimentos técnicos e crescer profissionalmente.
-</p>
-<button onclick="downloadPDF()">
-<i class="fa-solid fa-file-pdf"></i> Baixar Currículo (PDF)
-</button>
-</header>
-
-<section id="sobre">
-<h2><i class="fa-solid fa-user"></i> Sobre Mim</h2>
-<div class="card">
-<p>Sou estudante de Técnico em Eletrônica com experiência prática em projetos utilizando ESP32 e Arduino.</p>
-<p>Tenho interesse em automação, inovação tecnológica e desenvolvimento de soluções técnicas eficientes.</p>
-<p>Busco minha primeira oportunidade profissional para contribuir com dedicação, responsabilidade e crescimento contínuo.</p>
+<h2>Técnico em Eletrônica</h2>
+<a href="curriculo.pdf" target="_blank" class="btn">
+<i class="fa-solid fa-file-pdf"></i> Baixar Currículo
+</a>
 </div>
-</section>
 
-<section id="formacao">
-<h2><i class="fa-solid fa-graduation-cap"></i> Formação</h2>
-<div class="card">
-<p><strong>Técnico em Eletrônica</strong> — Em andamento</p>
-<p>Formação voltada para sistemas eletrônicos, automação e microcontroladores.</p>
+<div class="section">
+<h3>Sobre Mim</h3>
+<p>Estudante de Técnico em Eletrônica com foco em tecnologia, automação e sistemas embarcados.</p>
+<p>Possuo experiência prática com microcontroladores como ESP32 e Arduino, desenvolvendo projetos acadêmicos voltados para inovação e aplicação técnica.</p>
+<p>Busco minha primeira oportunidade profissional para aplicar conhecimentos e crescer na área tecnológica.</p>
 </div>
-</section>
 
-<section id="projetos">
-<h2><i class="fa-solid fa-flask"></i> Projetos</h2>
-<div class="card">
-<h3>Projetos Acadêmicos</h3>
-<p>Desenvolvimento de circuitos eletrônicos e sistemas embarcados utilizando ESP32 e Arduino.</p>
-
-<h3 style="margin-top:20px;">Portfólio Web</h3>
-<p>Criação deste site utilizando HTML e CSS, hospedado no GitHub.</p>
+<div class="section">
+<h3>Formação</h3>
+<p><strong>Técnico em Eletrônica</strong> – Em andamento</p>
 </div>
-</section>
 
-<section id="habilidades">
-<h2><i class="fa-solid fa-laptop-code"></i> Habilidades</h2>
-<div class="card skills">
+<div class="section">
+<h3>Projetos</h3>
+<p><strong>Projetos Acadêmicos:</strong> Desenvolvimento de circuitos e sistemas embarcados com ESP32 e Arduino.</p>
+<p><strong>Portfólio Web:</strong> Criação deste site utilizando HTML e CSS, publicado no GitHub.</p>
+</div>
+
+<div class="section">
+<h3>Habilidades</h3>
+<div class="skills">
 <span class="skill">ESP32</span>
 <span class="skill">Arduino</span>
 <span class="skill">Excel Avançado</span>
@@ -212,47 +176,21 @@ Buscando oportunidade para aplicar conhecimentos técnicos e crescer profissiona
 <span class="skill">Inglês Básico</span>
 <span class="skill">Espanhol Básico</span>
 </div>
-</section>
+</div>
 
-<section id="contato">
-<h2><i class="fa-solid fa-envelope"></i> Contato</h2>
-<div class="card">
+<div class="section contact">
+<h3>Contato</h3>
 <p><i class="fa-solid fa-phone"></i> (11) 98493-0971</p>
 <p><i class="fa-solid fa-envelope"></i> <a href="mailto:aleflima.12@hotmail.com">aleflima.12@hotmail.com</a></p>
 <p><i class="fa-brands fa-linkedin"></i> <a href="#">LinkedIn</a></p>
 <p><i class="fa-brands fa-github"></i> <a href="#">GitHub</a></p>
 </div>
-</section>
 
 <footer>
-© 2026 Alef Lima da Silva - Todos os direitos reservados
+© 2026 Alef Lima da Silva
 </footer>
 
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-    const texts=["Técnico em Eletrônica","Apaixonado por Tecnologia","Foco em Automação e Inovação"];
-    let count=0,index=0;
-    const typingElem=document.getElementById("typing");
-
-    function type(){
-        if(count===texts.length) count=0;
-        const current=texts[count];
-        typingElem.textContent=current.slice(0,++index);
-        if(index===current.length){
-            count++;
-            index=0;
-            setTimeout(type,1500);
-        }else{
-            setTimeout(type,100);
-        }
-    }
-    type();
-
-    window.downloadPDF=function(){
-        window.open("curriculo.pdf","_blank");
-    }
-});
-</script>
+</div>
 
 </body>
 </html>
