@@ -8,6 +8,9 @@
 <!-- Fonte Google -->
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-nr5QaGOSkF6sXn0m+E08j8Uf8POeQ0nD7u0o8e0VZ7S9P59kz3G2n9PLdJ6M9Vf4lh9xqYazD3wqosq9sA1Vug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <style>
 /* Reset básico */
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -31,7 +34,6 @@ nav {
     justify-content: center;
     gap: 35px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    transition: 0.3s;
 }
 nav a {
     color: #e2e8f0;
@@ -99,6 +101,9 @@ button:hover {
 /* Seções */
 section { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
 h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     border-left: 5px solid #2563eb;
     padding-left: 12px;
     margin-bottom: 20px;
@@ -161,22 +166,22 @@ footer { text-align: center; padding: 25px; background: #1e2d55; font-size: 14px
     <img src="sua-foto.jpg" alt="Alef Lima da Silva">
     <h1>Alef Lima da Silva</h1>
     <div class="subtitle" id="typing"></div>
-    <button onclick="downloadPDF()">Baixar Currículo (PDF)</button>
+    <button onclick="downloadPDF()"><i class="fa-solid fa-file-pdf"></i> Baixar Currículo (PDF)</button>
 </header>
 
 <section>
-<h2 id="sobre">Sobre Mim</h2>
+<h2 id="sobre"><i class="fa-solid fa-user"></i> Sobre Mim</h2>
 <div class="card" id="sobre-texto">
 Sou estudante do curso Técnico em Eletrônica, apaixonado por tecnologia e inovação.
 Atualmente em São Paulo em busca de crescimento profissional e oportunidades na área técnica.
 </div>
 
-<h2 id="experiencia">Experiência</h2>
+<h2 id="experiencia"><i class="fa-solid fa-briefcase"></i> Experiência</h2>
 <div class="card" id="experiencia-texto">
 <p>Em busca da primeira oportunidade profissional, focado em desenvolvimento de habilidades técnicas e acadêmicas.</p>
 </div>
 
-<h2 id="projetos">Projetos</h2>
+<h2 id="projetos"><i class="fa-solid fa-flask"></i> Projetos</h2>
 <div class="card" id="projetos-texto">
 <ul>
 <li>Projetos acadêmicos em Eletrônica</li>
@@ -185,7 +190,7 @@ Atualmente em São Paulo em busca de crescimento profissional e oportunidades na
 </ul>
 </div>
 
-<h2 id="habilidades">Habilidades</h2>
+<h2 id="habilidades"><i class="fa-solid fa-laptop-code"></i> Habilidades</h2>
 <div class="card skills" id="habilidades-texto">
 <span class="skill">Excel Avançado</span>
 <span class="skill">Word Avançado</span>
@@ -195,7 +200,7 @@ Atualmente em São Paulo em busca de crescimento profissional e oportunidades na
 <span class="skill">Adobe Básico</span>
 </div>
 
-<h2 id="contato">Contato</h2>
+<h2 id="contato"><i class="fa-solid fa-envelope"></i> Contato</h2>
 <div class="card" id="contato-texto">
 <p>📞 (11) 98493-0971</p>
 <p>✉️ <a href="mailto:aleflima.12@hotmail.com">aleflima.12@hotmail.com</a></p>
@@ -210,7 +215,6 @@ Atualmente em São Paulo em busca de crescimento profissional e oportunidades na
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    // Efeito digitando moderno
     const texts = ["Técnico em Eletrônica", "Apaixonado por Tecnologia", "Futuro Especialista em Inovação"];
     let count = 0, index = 0;
     const typingElem = document.getElementById("typing");
@@ -224,7 +228,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     type();
 
-    // Botão PDF
     window.downloadPDF = function(){ window.open("curriculo.pdf","_blank"); }
 });
 </script>
